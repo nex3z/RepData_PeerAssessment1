@@ -1,9 +1,8 @@
 ---
-title: 'Reproducible Research: Peer Assessment 1'
-output:
+title: "Reproducible Research: Peer Assessment 1"
+output: 
   html_document:
-    keep_md: yes
-  pdf_document: default
+    keep_md: true
 ---
 
 ## Library used
