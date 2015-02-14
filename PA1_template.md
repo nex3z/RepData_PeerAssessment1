@@ -12,6 +12,10 @@ library(ggplot2)
 library(gridExtra)
 ```
 
+```
+## Loading required package: grid
+```
+
 ## Loading and preprocessing the data
 
 ```r
