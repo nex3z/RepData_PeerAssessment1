@@ -29,15 +29,15 @@ data$date <- as.Date(data$date)
 1. Calculate the total number of steps taken per day
 
 ```r
-stepsPerDay <- tapply(data$steps, data$date, sum)
+  stepsPerDay <- tapply(data$steps, data$date, sum)
 ```
 
 2. Make a histogram of the total number of steps taken each day
 
 ```r
-m <- qplot(stepsPerDay, geom="histogram", main="Steps Taken Each Day", 
-           xlab="steps", ylab="count")
-m + geom_histogram(aes(fill = ..count..))
+  m <- qplot(stepsPerDay, geom="histogram", main="Steps Taken Each Day", 
+             xlab="steps", ylab="count")
+  m + geom_histogram(aes(fill = ..count..))
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
@@ -46,8 +46,8 @@ m + geom_histogram(aes(fill = ..count..))
 per day
 
 ```r
-meanSteps <- mean(stepsPerDay, na.rm=TRUE)
-medianSteps <- median(stepsPerDay, na.rm=TRUE)
+  meanSteps <- mean(stepsPerDay, na.rm=TRUE)
+  medianSteps <- median(stepsPerDay, na.rm=TRUE)
 ```
 The mean is 1.0766189 &times; 10<sup>4</sup>. The median is 10765.
 
