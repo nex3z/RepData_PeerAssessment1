@@ -12,10 +12,6 @@ library(ggplot2)
 library(gridExtra)
 ```
 
-```
-## Loading required package: grid
-```
-
 ## Loading and preprocessing the data
 
 ```r
@@ -27,28 +23,28 @@ data$date <- as.Date(data$date)
 ## What is mean total number of steps taken per day?
 
 1. Calculate the total number of steps taken per day
-
-```r
+  
+  ```r
   stepsPerDay <- tapply(data$steps, data$date, sum)
-```
+  ```
 
 2. Make a histogram of the total number of steps taken each day
-
-```r
+  
+  ```r
   m <- qplot(stepsPerDay, geom="histogram", main="Steps Taken Each Day", 
              xlab="steps", ylab="count")
   m + geom_histogram(aes(fill = ..count..))
-```
-
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
+  ```
+  
+  ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 3. Calculate and report the mean and median of the total number of steps taken 
 per day
-
-```r
+  
+  ```r
   meanSteps <- mean(stepsPerDay, na.rm=TRUE)
   medianSteps <- median(stepsPerDay, na.rm=TRUE)
-```
+  ```
 The mean is 1.0766189 &times; 10<sup>4</sup>. The median is 10765.
 
 
